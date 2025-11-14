@@ -31,7 +31,7 @@ parse_args() {
             unset is_parsing_flag_value
 
         elif [[ $token == --* ]]; then # --my-arg value
-            flag_name=$(to_flag_name $token)
+            flag_name=$(to_flag_name "$token")
             is_parsing_flag_value=1
 
         elif [[ $token == \@\@* ]]; then # @@my-arg
